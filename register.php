@@ -39,7 +39,7 @@ function NewUser() {
 }
 
 function SignUp() { 
-	if(!empty($_POST['user'])) {
+	if(!empty($_POST['email'])) {
 		$query = pg_query("SELECT * FROM users WHERE email = '$_POST[email]'")
 			or die('Query failed: ' . pg_last_error()); 
 		if(pg_num_rows($query) == 0) { NewUser(); } 
