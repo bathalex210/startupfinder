@@ -17,7 +17,7 @@ $(function() { //Document Ready Function
 		} else if (hash.indexOf("note")!=-1) { // Notifications
 			switch (hash.split("=")[1]) {
 				case "0":
-					document.getElementById('notification').innerHTML="Username or password incorrect.";
+					document.getElementById('notification').innerHTML="Email or password incorrect.";
 					break;
 				case "1":
 					document.getElementById('notification').innerHTML="Please login to use that feature.";
