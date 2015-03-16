@@ -1,0 +1,166 @@
+/**
+ * Global CSS Settings
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    margin: 0; padding: 0;
+    background: #fff;
+    font-family: benton-sans,'Helvetica Neue',helvetica,arial,sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/**
+ * Header
+ */
+header {
+    position: fixed;
+    top: 0px; 
+    left: 0px; right: 0px;
+    background: #5C6896;
+    color: #fff;
+    height: 65px;
+    border-bottom: 5px solid #eee;
+    z-index: 99;
+}
+header a, header a:visited, header a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+header a:visited {color: #fff;}
+header > a {
+	font-size: 20px;
+	height: 60px;
+    line-height: 60px;
+	display: inline-block;
+}
+header > a span {
+	vertical-align: middle;
+	padding: 0 5px 0 10px;
+}
+/**
+ * Search
+ */
+#search-box {
+	position: fixed;
+	top: 15px;
+	right: 185px;
+	width: 300px;
+	margin: 0;
+}
+
+#search-form {
+	height: 30px;
+	border: 1px solid #303E73;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#search-text  {
+	font-size: 14px;
+	color: #ddd;
+	border-width: 0;
+	background: transparent;
+}
+
+#search-box input[type="text"] {
+	padding-left: 8px;
+	width: 90%;
+	line-height: 26px;
+	color: #000;
+	outline: none;
+}
+
+#search-button {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	height: 28px;
+	width: 30px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 26px;
+	border-width: 0;
+	background-color: #9AA2BE;
+	-webkit-border-radius: 0px 2px 2px 0px;
+	-moz-border-radius: 0px 2px 2px 0px;
+	border-radius: 0px 2px 2px 0px;
+	cursor: pointer;
+}
+
+/**
+ * Account Menu in Header
+ */
+header #account {
+	position: fixed;
+        top: 0px; right: 0px;
+        text-align: left;
+	background: #303E73;
+	z-index: 100;
+}
+
+header ul {
+	-moz-transition: max-height .3s ease;
+    -webkit-transition: max-height .3s ease;
+    -o-transition: max-height .3s ease;
+    transition: max-height .3s ease;
+	list-style: none;
+	font-size: 14px;
+	margin: 0; padding: 0;
+	overflow: hidden;
+	max-height: 60px;
+}
+header ul:hover {max-height: 500px;}
+
+header ul li a {
+	-moz-transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+    -o-transition: background .3s ease;
+    transition: background .3s ease;
+	line-height: 60px;
+	display: inline-block;
+	height: 60px;
+	width: 175px;
+}
+header ul li a:hover {background: #111F50;}
+header ul li span {padding: 0 10px; text-align: left;}
+
+/**
+ * Main Content
+ */
+section {
+	position: absolute;
+	left: 250px; right: 0;
+	top: 65px;
+	bottom: 45px;
+	background: #fff;
+	z-index: 0;
+	min-width: 500px;
+}
+
+/**
+ * Footer
+ */
+footer {
+
+    position: fixed;
+    bottom: 0px;
+    right: 0px;	
+    background: #5C6896;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 13px;
+	width: 100%;
+
+}
+footer a {color: #fff;}
+
