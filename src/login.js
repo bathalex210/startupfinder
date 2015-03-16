@@ -11,7 +11,7 @@ $(function() { //Document Ready Function
 	 */
 	function displayNotes(hash) {
 		if (hash.indexOf("user")!=-1) { // Fill username textbox
-			document.getElementById('user').value=hash.split("=")[1];
+			document.getElementById('email').value=hash.split("=")[1];
 		} else if (hash.indexOf("loggedout")!=-1) { // Logged out
 			document.getElementById('notification').innerHTML="Logged out Successfully.";
 		} else if (hash.indexOf("note")!=-1) { // Notifications

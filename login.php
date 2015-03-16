@@ -34,7 +34,7 @@ function SignIn() {
 	$email = $_POST['email']; 
 	$password = md5($_POST['pass']); 
 	if(!empty($_POST['email'])) { 
-		$query = "SET search_path TO synergy; SELECT * FROM synergy.users WHERE username='$userName' AND password='$password'";
+		$query = "SELECT * FROM synergy.users WHERE email='$email' AND password='$password'";
 		$result = pg_query($query) or die('Server error. Please try reloading <a href="http://startupfinder.herokuapp.com/login.php">the login page</a>.');
 		if(pg_num_rows($result) != 1) {
 			//Reload page with note code: 0 - 'Email or password incorrect.'
