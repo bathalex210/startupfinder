@@ -33,6 +33,7 @@ function userMenu() {
 			</div>
 			<div id="account">
 				<ul>
+					<li><a href="/profile.php"><span class="fa fa-plus"></span>New Start-Up</a></li>
 					<li><a href="/profile.php"><span class="fa fa-cogs"></span>My Account</a></li>
 					<li><a href="/login.php"><span class="fa fa-sign-out"></span>Logout</a></li>
 				</ul>
