@@ -11,7 +11,13 @@
 		or die('Could not connect: ' . pg_last_error());
 	
 	$title = $_POST['title'];
-	$query = "INSERT INTO likes (email,title,rating) VALUES ('$email','$title','like')"; 
+	$query = "SELECT * FROM likes WHERE email='$email' AND title='$title'";
+	$data = pg_query($query) or die('Query failed: ' . pg_last_error()); 
+	if ($data) {
+		$query = "UPDATE likes SET rating='like' WHERE email='$email' AND title='$title'";
+	} else {
+		$query = "INSERT INTO likes (email,title,rating) VALUES ('$email','$title','like')"; 
+	}
 	$data = pg_query($query) or die('Query failed: ' . pg_last_error()); 
 	if($data) { //Liked
         die();
