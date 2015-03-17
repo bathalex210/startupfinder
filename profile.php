@@ -44,14 +44,8 @@ if (!isset($email) || empty($email)) {
 			}
 			echo '<div class="startups">';
 				$email = $_SESSION['email'];
-				$query = "SELECT * FROM startup WHERE email='$email'";
-				$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-				while ($data = pg_fetch_object($result)) {
-					echo '<h2>'.$data->title.'</h2>';
-					echo '<p> Email: '.$data->description.'</p>';
-					echo '<p> Email: '.$data->industry.'</p>';
-					echo '<p> Email: '.$data->email.'</p>';
-				}
+				include 'functions/startup.php';
+				loadStartups($email, ""); // Load all start-ups from user=$email
 			echo '</div>';
 			// Closing connection
 			pg_close($dbconn);
