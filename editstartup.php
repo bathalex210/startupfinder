@@ -54,7 +54,7 @@
 		<fieldset >
 			<legend><span class="fa fa-pencil fa-2x"></span>Edit Start-up</legend>
 			<input type='hidden' name='submitted' id='submitted' value='1'/>
-			<input type='hidden' name='title' id='title' value='<?php $_POST['title']; ?>'/>
+			<input type='hidden' name='title' id='title' value='<?php echo $_POST['title']; ?>'/>
 			<input type='text' name='newtitle' id='newtitle' maxlength="20" placeholder="New Title"/>
 			<textarea name='description' id='description'>New Description of the Start Up</textarea>
 			<select id='industry' name='industry'>
