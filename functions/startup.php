@@ -20,6 +20,10 @@
 			if (strcmp($_SESSION['email'],$email)==0) {
 				echo '<button type="submit"><span class="fa fa-pencil fa-2x"></span></button>';
 			}
+			if (isset($_SESSION['email'])) {
+				echo '<a href="#" onclick="likeStartup();">LIKE!</a>';
+				echo '<a href="#" onclick="dislikeStartup();">DISLIKE!</a>';
+			}
 			echo '<h2>'.$data->title.'</h2>';
 			echo '<p> Email: '.$data->description.'</p>';
 			echo '<p> Email: '.$data->industry.'</p>';
