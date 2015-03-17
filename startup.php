@@ -12,15 +12,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<?php
-session_start(); // Start PHP session to test if user is logged in.
-$email = $_SESSION['email'];
-if (!isset($email) || empty($email)) {
-      // They are not logged in. Redirect to login page with note code 1.
-	  header("Location: http://startupfinder.herokuapp.com/login.php#note=1");
-      die();
-}
-?>
 <body>
 	<?php
 		session_start();
@@ -38,8 +29,8 @@ if (!isset($email) || empty($email)) {
 				or die('Could not connect: ' . pg_last_error());
 
 			$startup = $_GET['title'];
-			if (!empty($startup)) {
-				$email = $_SESSION['email'];
+			$email = $_GET['user'];
+			if (!empty($startup) && !empty($email)) {
 				$query = "SELECT * FROM startup WHERE email='$email' AND title='$startup'";
 				$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 				while ($data = pg_fetch_object($result)) {

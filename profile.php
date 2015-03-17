@@ -42,6 +42,19 @@ if (!isset($email) || empty($email)) {
 				echo '<h2>'.$data->name.'</h2>';
 				echo '<p> Email: '.$data->email.'</p>';
 			}
+			echo '<div class="startups">';
+				$email = $_SESSION['email'];
+				$query = "SELECT * FROM startup WHERE email='$email' AND title='$startup'";
+				$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+				while ($data = pg_fetch_object($result)) {
+					echo '<h2>'.$data->title.'</h2>';
+					echo '<p> Email: '.$data->description.'</p>';
+					echo '<p> Email: '.$data->industry.'</p>';
+					echo '<p> Email: '.$data->email.'</p>';
+				}
+			echo '</div>';
+			// Closing connection
+			pg_close($dbconn);
 		?>
 	</div>
 	</section>

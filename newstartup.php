@@ -32,7 +32,7 @@ function NewStartup() {
 	$query = "INSERT INTO startup (description,email,title,industry) VALUES ('$desc','$email','$title', '$industry')"; 
 	$data = pg_query($query) or die('Query failed: ' . pg_last_error()); 
 	if($data) { //New Startup Created
-		header("Location: http://startupfinder.herokuapp.com/startup.php?title=".$title);
+		header("Location: http://startupfinder.herokuapp.com/startup.php?user=".$email."&title=".$title);
         die();
 	}
 }
