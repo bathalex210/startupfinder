@@ -32,7 +32,7 @@ function NewStartup() {
 	$query = "INSERT INTO startup (description,email,title,industry) VALUES ('$desc','$email','$title', '$industry')"; 
 	$data = pg_query($query) or die('Query failed: ' . pg_last_error()); 
 	if($data) { //New Startup Created
-		header("Location: http://startupfinder.herokuapp.com/startup.php?user=".$email."&title=".$title);
+		header("Location: http://startupfinder.herokuapp.com/startup.php?title=".$title);
         die();
 	}
 }
@@ -70,6 +70,6 @@ pg_close($dbconn);
 			</fieldset>
 		</form>
 	</section>
-	<footer><a href="https://synergyspace309.herokuapp.com/">SynergySpace</a> is a coworking space rental and teaming to succeed service. &copy; 2015</footer>
+	<footer><?php include 'functions/footer.php'; showFooter();?></footer>
 </body>
 </html>

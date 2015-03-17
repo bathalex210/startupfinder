@@ -73,6 +73,6 @@ pg_close($dbconn);
 			</fieldset>
 		</form> 
 	</section>
-	<footer><a href="https://synergyspace309.herokuapp.com/">SynergySpace</a> is a coworking space rental and teaming to succeed service. &copy; 2015</footer>
+	<footer><?php include 'functions/footer.php'; showFooter();?></footer>
 </body>
 </html>

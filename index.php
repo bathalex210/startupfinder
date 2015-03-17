@@ -39,6 +39,7 @@
 			</fieldset>
 		</form>
     </section>
+	<footer><?php include 'functions/footer.php'; showFooter();?></footer>
 </body>
 </html>
 	

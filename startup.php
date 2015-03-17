@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- For MOBILE -->
-<title>Profile - StartupFinder</title>
+<title>Startup - StartupFinder</title>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> <!-- Google Font Import -->
 <link rel="stylesheet" href="CSS/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="CSS/global.css"> <!-- Global CSS Styling -->
-<link rel="stylesheet" type="text/css" href="CSS/profile.css"> <!-- Profile CSS Styling -->
+<link rel="stylesheet" type="text/css" href="CSS/startup.css"> <!-- Register CSS Styling -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <?php
 session_start(); // Start PHP session to test if user is logged in.
@@ -30,22 +32,29 @@ if (!isset($email) || empty($email)) {
 		}
 	?>
 	<section>
-	<div id="card">
 		<?php
+			// Connecting, selecting database
 			$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
 				or die('Could not connect: ' . pg_last_error());
-			
-			$query = "SELECT * FROM users WHERE email='$email'";
-			$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-			while ($data = pg_fetch_object($result)) {
-				echo '<img src="http://www.adtechnology.co.uk/images/UGM-default-user.png">';
-				echo '<h2>'.$data->name.'</h2>';
-				echo '<p> Email: '.$data->email.'</p>';
+
+			$startup = $_GET['title'];
+			if (!empty($startup)) {
+				$email = $_SESSION['email'];
+				$query = "SELECT * FROM startup WHERE email='$email' AND title='$startup'";
+				$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+				while ($data = pg_fetch_object($result)) {
+					echo '<h2>'.$data->title.'</h2>';
+					echo '<p> Email: '.$data->description.'</p>';
+					echo '<p> Email: '.$data->industry.'</p>';
+					echo '<p> Email: '.$data->email.'</p>';
+				}
+			} else {
+				echo "Start Up does not exist.";
 			}
+			// Closing connection
+			pg_close($dbconn);
 		?>
-	</div>
 	</section>
 	<footer><?php include 'functions/footer.php'; showFooter();?></footer>
 </body>
-
 </html>
