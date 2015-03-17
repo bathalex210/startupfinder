@@ -13,10 +13,10 @@
 	$title = $_POST['title'];
 	$query = "SELECT * FROM likes WHERE email='$email' AND title='$title'";
 	$data = pg_query($query) or die('Query failed: ' . pg_last_error()); 
-	if (empty($data)) {
-		$query = "INSERT INTO likes (email,title,rating) VALUES ('$email','$title','like') WHERE email='$email' AND title='$title'"; 
-	} else {
+	if ($data) {
 		$query = "UPDATE likes SET rating='like' WHERE email='$email' AND title='$title'";
+	} else {
+		$query = "INSERT INTO likes (email,title,rating) VALUES ('$email','$title','like') WHERE email='$email' AND title='$title'"; 
 	}
 	$data = pg_query($query) or die('Query failed: ' . pg_last_error()); 
 	if($data) { //Liked

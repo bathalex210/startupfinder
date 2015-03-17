@@ -9,3 +9,8 @@ CREATE TABLE startup(
 	industry text NOT NULL,
 	email text NOT NULL
 );
+CREATE TABLE likes(
+	email text NOT NULL,
+	title text NOT NULL,
+	rating text NOT NULL
+);
