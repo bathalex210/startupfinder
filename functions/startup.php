@@ -21,8 +21,8 @@
 				echo '<button type="submit"><span class="fa fa-pencil fa-2x"></span></button>';
 			}
 			if (isset($_SESSION['email'])) {
-				echo '<a href="#" onclick="likeStartup('.echo(json_encode($data->title)).');">LIKE!</a>';
-				echo '<a href="#" onclick="dislikeStartup('.echo(json_encode($data->title)).');">DISLIKE!</a>';
+				echo '<a href="#" onclick="likeStartup('.json_encode($data->title).');">LIKE!</a>';
+				echo '<a href="#" onclick="dislikeStartup('.json_encode($data->title).');">DISLIKE!</a>';
 			}
 			echo '<h2>'.$data->title.'</h2>';
 			echo '<p> Email: '.$data->description.'</p>';
