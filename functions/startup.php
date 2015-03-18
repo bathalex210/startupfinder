@@ -10,8 +10,10 @@
 		}
 		if (empty($title)) {
 			$query = "SELECT * FROM startup WHERE email='$email'";
+		} elseif (empty($email) && empty($title)) {
+			$query = "SELECT * FROM startup";
 		} else {
-			$query = "SELECT * FROM startup WHERE email='$email' AND title='$title'";
+			$query = "SELECT * FROM startup WHERE email='$email' AND title='$title'"
 		}
 		$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 		while ($data = pg_fetch_object($result)) {
