@@ -1,3 +1,36 @@
+/**
+ * Aside navigation
+ */
+aside {
+	position: fixed;
+	left: 0;
+	top: 65px;
+	bottom: 45px;
+	width: 250px;
+	background: #eee;
+}
+aside button {
+	cursor: pointer;
+	background: none;
+	border: none;
+	font-size: 13px;
+	padding: 10px 0;
+	width: 100%;
+	color: #111F50;
+	text-decoration: none;
+	text-align: left;
+}
+aside button:hover {
+	background: #888;
+	color: #fff;
+}
+aside button span {
+	text-align: center;
+	width: 40px;
+}
+aside button span:nth-child(2) {
+	float: right;
+}
 form {
 	position: relative;
 	padding: 10px;
