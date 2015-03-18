@@ -30,14 +30,58 @@
 			defaultMenu();
 		}
 	?>
+	<aside>
+		<?php 
+		function ascendVSdescend($att) {
+			$str="";
+			switch($_GET['order']){
+				case $att.' asc':$str='desc';break;
+				case $att.' desc':$str='asc';break;
+				default: $str='asc';
+			}
+			return $str;
+		}
+		?>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
+		<input type="hidden" name="order" value="title <?php echo ascendVSdescend('title');?>" />
+		<button type="submit">
+			<span class="fa fa-random"></span>Title<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('title');?>"></span>
+		</button>
+		</form>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
+		<input type="hidden" name="order" value="industry <?php echo ascendVSdescend('industry');?>" /> 
+		<button type="submit">
+			<span class="fa fa-map-marker"></span>Industry<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('industry');?>"></span>
+		</button>	
+		</form>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
+		<input type="hidden" name="order" value="name <?php echo ascendVSdescend('name');?>" /> 
+		<button type="submit">
+			<span class="fa fa-map-marker"></span>Name<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('name');?>"></span>
+		</button>
+		</form>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
+		<input type="hidden" name="order" value="date <?php echo ascendVSdescend('date');?>" /> 
+		<button type="submit">
+			<span class="fa fa-map-marker"></span>Date<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('date');?>"></span>
+		</button>	
+		</form>
+	</aside>
 	<section>
 		<?php
+			$search=$_GET['q'];
+			$order=$_GET['order'];
+			if (empty($order)) {$order="title";}
 			// Connecting, selecting database
 			$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
 				or die('Could not connect: ' . pg_last_error());
 		
 			include 'functions/startup.php';
-			loadStartups("SELECT * FROM startup");
+			loadStartups("SELECT * FROM startup WHERE LOWER(title) LIKE LOWER('%$search%') ORDER BY $order;");
 			// Closing connection
 			pg_close($dbconn);
 		?>

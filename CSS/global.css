@@ -42,7 +42,59 @@ header > a span {
 	vertical-align: middle;
 	padding: 0 5px 0 10px;
 }
+/**
+ * Search
+ */
+#search-box {
+	position: fixed;
+	top: 15px;
+	right: 185px;
+	width: 300px;
+	margin: 0;
+}
 
+#search-form {
+	height: 30px;
+	border: 1px solid #303E73;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#search-text  {
+	font-size: 14px;
+	color: #ddd;
+	border-width: 0;
+	background: transparent;
+}
+
+#search-box input[type="text"] {
+	padding-left: 8px;
+	width: 90%;
+	line-height: 26px;
+	color: #000;
+	outline: none;
+}
+
+#search-button {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	height: 28px;
+	width: 30px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 26px;
+	border-width: 0;
+	background-color: #9AA2BE;
+	-webkit-border-radius: 0px 2px 2px 0px;
+	-moz-border-radius: 0px 2px 2px 0px;
+	border-radius: 0px 2px 2px 0px;
+	cursor: pointer;
+}
 /**
  * Account Menu in Header
  */
