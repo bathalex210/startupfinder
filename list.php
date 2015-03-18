@@ -45,7 +45,8 @@
 			$active = "normal";
 			$order = $_GET['order'];
 			if (!empty($order)) {
-				if (srtcmp($att, explode("+",$order)[0])==0) {
+				$str = explode("+",$order)[0];
+				if (srtcmp($att, $str)==0) {
 					$active = "active";
 				}
 			}
