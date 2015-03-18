@@ -12,15 +12,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<?php
-session_start(); // Start PHP session to test if user is logged in.
-$email = $_SESSION['email'];
-if (!isset($email) || empty($email)) {
-      // They are not logged in. Redirect to login page with note code 1.
-	  header("Location: http://startupfinder.herokuapp.com/login.php#note=1");
-      die();
-}
-?>
 	<script type="text/javascript">
 		function likeStartup(title) {
 			$.post("functions/like.php", {title:title});
