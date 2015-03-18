@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- For MOBILE -->
-<title>Profile - StartupFinder</title>
+<title>Start-Up List - StartupFinder</title>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> <!-- Google Font Import -->
 <link rel="stylesheet" href="CSS/font-awesome.min.css">
@@ -37,7 +37,7 @@
 				or die('Could not connect: ' . pg_last_error());
 		
 			include 'functions/startup.php';
-			loadStartups("", "");
+			loadStartups("SELECT * FROM startup");
 			// Closing connection
 			pg_close($dbconn);
 		?>

@@ -36,11 +36,11 @@
 			$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
 				or die('Could not connect: ' . pg_last_error());
 
-			$startup = $_GET['title'];
+			$title = $_GET['title'];
 			$email = $_GET['user'];
-			if (!empty($startup) && !empty($email)) {
+			if (!empty($title) && !empty($email)) {
 				include 'functions/startup.php';
-				loadStartups($email, $startup);
+				loadStartups("SELECT * FROM startup WHERE email='$email' AND title='$title'");
 			} else {
 				echo "Start Up does not exist.";
 			}

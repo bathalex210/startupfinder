@@ -4,16 +4,9 @@
 	 * If no title is included in the call of the function,
 	 * all of the start-ups associated with the user will appear.
 	 */
-	function loadStartups($email, $title) {
+	function loadStartups($query) {
 		if (session_status() == PHP_SESSION_NONE) {
 			session_start();
-		}
-		if (empty($title)) {
-			$query = "SELECT * FROM startup WHERE email='$email'";
-		} elseif (empty($email) && empty($title)) {
-			$query = "SELECT * FROM startup";
-		} else {
-			$query = "SELECT * FROM startup WHERE email='$email' AND title='$title'";
 		}
 		$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 		while ($data = pg_fetch_object($result)) {

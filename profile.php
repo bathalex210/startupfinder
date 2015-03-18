@@ -55,7 +55,7 @@ if (!isset($email) || empty($email)) {
 			echo '<div class="startups">';
 				$email = $_SESSION['email'];
 				include 'functions/startup.php';
-				loadStartups($email, ""); // Load all start-ups from user=$email
+				loadStartups("SELECT * FROM startup WHERE email='$email'");
 			echo '</div>';
 			// Closing connection
 			pg_close($dbconn);
