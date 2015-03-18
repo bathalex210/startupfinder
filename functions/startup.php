@@ -19,7 +19,7 @@
 				echo "<button type=\"button\" onclick=\"likeStartup('$data->title');\"><span class=\"fa fa-thumbs-up\"></span>Like</button>";
 				echo "<button type=\"button\" onclick=\"dislikeStartup('$data->title');\"><span class=\"fa fa-thumbs-down\"></span>Dislike</button>";
 			}
-			echo '<h2><a href="http://startupfinder.herokuapp.com/startup.php?user='.$data->email.'title='.$data->title.'">'.$data->title.'</a></h2>';
+			echo '<h2><a href="http://startupfinder.herokuapp.com/startup.php?user='.$data->email.'&title='.$data->title.'">'.$data->title.'</a></h2>';
 			echo '<p> Email: '.$data->description.'</p>';
 			echo '<p> Email: '.$data->industry.'</p>';
 			echo '<p> Email: '.$data->email.'</p>';
