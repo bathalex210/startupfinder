@@ -42,16 +42,14 @@
 			return $str;
 		}
 		function isActive($att) {
+			$active = "normal";
 			$order = $_GET['order'];
-			if (empty($order)) {
-				return 'normal';
-			} else {
+			if (!empty($order)) {
 				if (srtcmp($att, explode("+",$order])[0])==0) {
-					return 'active';
-				} else {
-					return 'normal';
+					$active = "active";
 				}
 			}
+			return $active;
 		}
 		?>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
