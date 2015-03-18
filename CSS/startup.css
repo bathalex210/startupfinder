@@ -1,36 +1,36 @@
 section{ left: 0; padding: 20px;}
-form {
+section form {
 	position: relative;
 	padding: 10px;
 	margin: 0;
 }
-form:nth-child(even) {
+section form:nth-child(even) {
 	background: #efefef;
 }
-form:nth-child(odd) {
+section form:nth-child(odd) {
 	background: #f9f9f9
 }
-form button {
+section form button {
 	width: 100px;
 	height: 40px;
 	position: absolute;
 }
-form button:nth-child(2) {
+section form button:nth-child(2) {
 	top: 10px;
 	right: 10px;
 }
-form button:nth-child(3) {
+section form button:nth-child(3) {
 	bottom: 10px;
 	right: 10px;
 }
-form button:nth-child(4) {
+section form button:nth-child(4) {
 	bottom: 10px;
 	right: 120px;
 }
-form button[type="button"] span {
+section form button[type="button"] span {
 	padding-right: 10px;
 }
-form h2 {
+section form h2 {
 	margin: 0;
 }
 
