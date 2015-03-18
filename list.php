@@ -42,10 +42,15 @@
 			return $str;
 		}
 		function isActive($att) {
-			if (srtcmp($att, explode("+",$_GET['order'])[0])==0) {
-				return "active";
+			$order = $_GET['order'];
+			if (empty($order)) {
+				return 'normal';
 			} else {
-				return "normal";
+				if (srtcmp($att, explode("+",$order])[0])==0) {
+					return 'active';
+				} else {
+					return 'normal';
+				}
 			}
 		}
 		?>
