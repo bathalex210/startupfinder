@@ -40,27 +40,25 @@ if (!isset($email) || empty($email)) {
 		}
 	?>
 	<section>
-	<div id="card">
-		<?php
-			$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
-				or die('Could not connect: ' . pg_last_error());
-			
-			$query = "SELECT * FROM users WHERE email='$email'";
-			$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-			while ($data = pg_fetch_object($result)) {
-				echo '<img src="http://www.adtechnology.co.uk/images/UGM-default-user.png">';
-				echo '<h2>'.$data->name.'</h2>';
-				echo '<p> Email: '.$data->email.'</p>';
-			}
-			echo '<div class="startups">';
-				$email = $_SESSION['email'];
-				include 'functions/startup.php';
-				loadStartups("SELECT * FROM startup WHERE email='$email'");
-			echo '</div>';
-			// Closing connection
-			pg_close($dbconn);
-		?>
-	</div>
+	<?php
+		$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
+			or die('Could not connect: ' . pg_last_error());
+		
+		$query = "SELECT * FROM users WHERE email='$email'";
+		$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+		while ($data = pg_fetch_object($result)) {
+			echo '<img src="http://www.adtechnology.co.uk/images/UGM-default-user.png">';
+			echo '<h2>'.$data->name.'</h2>';
+			echo '<p> Email: '.$data->email.'</p>';
+		}
+		echo '<div class="startups">';
+			$email = $_SESSION['email'];
+			include 'functions/startup.php';
+			loadStartups("SELECT * FROM startup WHERE email='$email'");
+		echo '</div>';
+		// Closing connection
+		pg_close($dbconn);
+	?>
 	</section>
 	<footer><?php include 'functions/footer.php'; showFooter();?></footer>
 </body>

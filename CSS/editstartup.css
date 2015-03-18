@@ -1,0 +1,44 @@
+section form {
+	max-width: 600px;
+	margin: 40px auto 0 auto;
+	border: 1px solid #cbc9c9;
+	border-radius: 7px;
+	padding: 10px;
+	background: #ebebeb;
+}
+section fieldset {border: none;}
+section form legend {
+	color: #333;
+	max-width: 500px;
+	font-weight: 600;
+	text-align: center;
+	font-size: 30px;
+	border-bottom: 1px solid #cbc9c9;
+	padding: 5px 50px;
+	margin-bottom: 10px;
+}
+section form legend span {
+	padding-right: 10px;
+}
+section form input[type="text"] {
+	width: 80%;
+	height: 30px;
+	padding: 0 5px;
+	margin: 10px 10%;
+}
+section form textarea {
+	width: 80%;
+	resize: vertical;
+	margin: 10px 10%;
+	padding: 0 5px;
+}
+section form select {
+	width: 80%;
+	margin: 10px 10%;
+}
+section form input[type="submit"] {
+	display: block;
+	margin: 0 auto;
+	width: 100px;
+	height: 35px;
+}

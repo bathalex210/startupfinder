@@ -8,7 +8,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> <!-- Google Font Import -->
 <link rel="stylesheet" href="CSS/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="CSS/global.css"> <!-- Global CSS Styling -->
-<link rel="stylesheet" type="text/css" href="CSS/profile.css"> <!-- Profile CSS Styling -->
+<link rel="stylesheet" type="text/css" href="CSS/editstartup.css"> <!-- Profile CSS Styling -->
 </head>
 <?php
 	session_start(); // Start PHP session to test if user is logged in.
