@@ -20,8 +20,12 @@ aside button {
 	text-decoration: none;
 	text-align: left;
 }
-aside button:hover {
+aside button.active {
 	background: #888;
+	color: #fff;
+}
+aside button:active {
+	background: #666;
 	color: #fff;
 }
 aside button span {

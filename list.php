@@ -41,32 +41,39 @@
 			}
 			return $str;
 		}
+		function isActive($att) {
+			if (srtcmp($att, $_GET['order'])==0) {
+				return "active";
+			} else {
+				return "";
+			}
+		}
 		?>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
 		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
 		<input type="hidden" name="order" value="title <?php echo ascendVSdescend('title');?>" />
-		<button type="submit">
+		<button class="<?php isActive('title')?>" type="submit">
 			<span class="fa fa-random"></span>Title<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('title');?>"></span>
 		</button>
 		</form>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
 		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
 		<input type="hidden" name="order" value="industry <?php echo ascendVSdescend('industry');?>" /> 
-		<button type="submit">
+		<button class="<?php isActive('industry')?>" type="submit">
 			<span class="fa fa-briefcase"></span>Industry<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('industry');?>"></span>
 		</button>	
 		</form>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
 		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
 		<input type="hidden" name="order" value="description <?php echo ascendVSdescend('description');?>" /> 
-		<button type="submit">
+		<button class="<?php isActive('description')?>" type="submit">
 			<span class="fa fa-pencil-square-o"></span>Description<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('description');?>"></span>
 		</button>
 		</form>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
 		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
 		<input type="hidden" name="order" value="date <?php echo ascendVSdescend('date');?>" /> 
-		<button type="submit">
+		<button class="<?php isActive('date')?>" type="submit">
 			<span class="fa fa-calendar"></span>Date<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('date');?>"></span>
 		</button>	
 		</form>
