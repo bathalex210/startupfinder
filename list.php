@@ -53,21 +53,21 @@
 		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
 		<input type="hidden" name="order" value="industry <?php echo ascendVSdescend('industry');?>" /> 
 		<button type="submit">
-			<span class="fa fa-map-briefcase"></span>Industry<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('industry');?>"></span>
+			<span class="fa fa-briefcase"></span>Industry<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('industry');?>"></span>
 		</button>	
 		</form>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
 		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
 		<input type="hidden" name="order" value="description <?php echo ascendVSdescend('description');?>" /> 
 		<button type="submit">
-			<span class="fa fa-map-pencil-square-o"></span>Description<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('description');?>"></span>
+			<span class="fa fa-pencil-square-o"></span>Description<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('description');?>"></span>
 		</button>
 		</form>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
 		<input type="hidden" name="q" value="<?php echo $_GET['q'];?>" />
 		<input type="hidden" name="order" value="date <?php echo ascendVSdescend('date');?>" /> 
 		<button type="submit">
-			<span class="fa fa-map-calendar"></span>Date<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('date');?>"></span>
+			<span class="fa fa-calendar"></span>Date<span class="fa fa-sort-alpha-<?php echo ascendVSdescend('date');?>"></span>
 		</button>	
 		</form>
 	</aside>
