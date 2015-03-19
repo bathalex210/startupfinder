@@ -144,7 +144,19 @@ section {
 	z-index: 0;
 	min-width: 500px;
 }
-
+section a {
+	color: #389D3A;
+	text-decoration: none;
+	border-bottom: 2px solid #389D3A;
+}
+section a:visited {
+	color: #337B34;
+	border-bottom: 2px solid #337B34;
+}
+section a:hover {
+	color: #56B358;
+	border-bottom: 2px solid #56B358;
+}
 /**
  * Footer
  */
