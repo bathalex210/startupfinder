@@ -46,11 +46,13 @@ if (!isset($email) || empty($email)) {
 		
 		$query = "SELECT * FROM users WHERE email='$email'";
 		$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+		echo '<div id="profile">';
 		while ($data = pg_fetch_object($result)) {
 			echo '<img src="http://www.adtechnology.co.uk/images/UGM-default-user.png">';
 			echo '<h2>'.$data->name.'</h2>';
 			echo '<p> Email: '.$data->email.'</p>';
 		}
+		echo '</div>';
 		echo '<div class="startups">';
 			$email = $_SESSION['email'];
 			include 'functions/startup.php';

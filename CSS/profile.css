@@ -1,4 +1,27 @@
 section{ left: 0; padding: 20px;}
+/**
+ * Profile Style
+ */
+section #profile {
+ 	position: relative;
+ 	margin-bottom: 10px;
+}
+section #profile h2 {
+	position: absolute;
+	top: 0;
+	left: 250px;
+}
+section #profile p {
+	position: absolute;
+	top: 50px;
+	left: 250px;
+}
+section #profile img {
+	display: inline;
+}
+/**
+ * Startup List Style
+ */
 section form {
 	position: relative;
 	padding: 10px;
