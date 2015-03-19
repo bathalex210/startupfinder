@@ -21,7 +21,7 @@ header {
     position: fixed;
     top: 0px; 
     left: 0px; right: 0px;
-    background: #5C6896;
+    background: #56B358;
     color: #fff;
     height: 65px;
     border-bottom: 5px solid #eee;
@@ -55,7 +55,7 @@ header > a span {
 
 #search-form {
 	height: 30px;
-	border: 1px solid #303E73;
+	border: 1px solid #337B34;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -89,7 +89,7 @@ header > a span {
 	text-align: center;
 	line-height: 26px;
 	border-width: 0;
-	background-color: #9AA2BE;
+	background-color: #56B358;
 	-webkit-border-radius: 0px 2px 2px 0px;
 	-moz-border-radius: 0px 2px 2px 0px;
 	border-radius: 0px 2px 2px 0px;
@@ -102,7 +102,7 @@ header #account {
 	position: fixed;
         top: 0px; right: 0px;
         text-align: left;
-	background: #303E73;
+	background: #389D3A;
 	z-index: 100;
 }
 
@@ -129,7 +129,7 @@ header ul li a {
 	height: 60px;
 	width: 175px;
 }
-header ul li a:hover {background: #111F50;}
+header ul li a:hover {background: #337B34;}
 header ul li span {padding: 0 10px; text-align: left;}
 
 /**
@@ -153,7 +153,9 @@ footer {
     position: fixed;
     bottom: 0px;
     right: 0px;	
-    background: #5C6896;
+    
+
+    background: #56B358;
     color: #fff;
     text-align: center;
     line-height: 45px;

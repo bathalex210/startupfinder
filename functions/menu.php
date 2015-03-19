@@ -2,7 +2,7 @@
 function defaultMenu () {
 	echo 
 		'<header>
-			<a href="/index.php"><span class="fa fa-connectdevelop fa-2x"></span><span>SynergySpace</span></a>
+			<a href="/index.php"><span class="fa fa-heartbeat fa-2x"></span><span>StartupFinder</span></a>
 			<div id="search-box">
 				<form action="/search.php" id="search-form" method="get" target="_top">
 					<input id="search-text" name="q" placeholder="Search by address" type="text" autocomplete=off/>
@@ -23,7 +23,7 @@ function defaultMenu () {
 function userMenu() {
 	echo 
 		'<header>
-			<a href="/index.php"><span class="fa fa-connectdevelop fa-2x"></span><span>SynergySpace</span></a>
+			<a href="/index.php"><span class="fa fa-heartbeat fa-2x"></span><span>StartupFinder</span></a>
 			<div id="search-box">
 				<form action="/search.php" id="search-form" method="get" target="_top">
 					<input id="search-text" name="q" placeholder="Search by address" type="text" autocomplete=off/>
