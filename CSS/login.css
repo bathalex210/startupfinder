@@ -2,7 +2,8 @@
  * Section
  */
 section {
- 	left: 0;
+ 	position: absolute;
+ 	left: 0; right: 0;
 }
 /**
  * Log-In Form

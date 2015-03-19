@@ -8,7 +8,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> <!-- Google Font Import -->
 <link rel="stylesheet" href="CSS/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="CSS/global.css"> <!-- Global CSS Styling -->
-<link rel="stylesheet" type="text/css" href="CSS/startup.css"> <!-- Register CSS Styling -->
+<link rel="stylesheet" type="text/css" href="CSS/newstartup.css"> <!-- Register CSS Styling -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
