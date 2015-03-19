@@ -136,13 +136,11 @@ header ul li span {padding: 0 10px; text-align: left;}
  * Main Content
  */
 section {
-	position: absolute;
-	left: 250px; right: 0;
-	top: 65px;
-	bottom: 45px;
 	background: #fff;
 	z-index: 0;
 	min-width: 500px;
+	margin-top: 65px;
+	margin-bottom: 45px;
 }
 section a {
 	color: #389D3A;
