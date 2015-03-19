@@ -4,8 +4,8 @@ function defaultMenu () {
 		'<header>
 			<a href="/index.php"><span class="fa fa-heartbeat fa-2x"></span><span>StartupFinder</span></a>
 			<div id="search-box">
-				<form action="/search.php" id="search-form" method="get" target="_top">
-					<input id="search-text" name="q" placeholder="Search by address" type="text" autocomplete=off/>
+				<form action="/list.php" id="search-form" method="get" target="_top">
+					<input id="search-text" name="q" placeholder="Search by title" type="text" autocomplete=off/>
 					<button id="search-button" type="submit">                     
 						<span class="fa fa-search"></span>
 					</button>
@@ -25,8 +25,8 @@ function userMenu() {
 		'<header>
 			<a href="/index.php"><span class="fa fa-heartbeat fa-2x"></span><span>StartupFinder</span></a>
 			<div id="search-box">
-				<form action="/search.php" id="search-form" method="get" target="_top">
-					<input id="search-text" name="q" placeholder="Search by address" type="text" autocomplete=off/>
+				<form action="/list.php" id="search-form" method="get" target="_top">
+					<input id="search-text" name="q" placeholder="Search by title" type="text" autocomplete=off/>
 					<button id="search-button" type="submit">                     
 						<span class="fa fa-search"></span>
 					</button>
