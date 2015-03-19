@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- For MOBILE -->
-<title>Profile - StartupFinder</title>
+<title>Edit Startup - StartupFinder</title>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> <!-- Google Font Import -->
 <link rel="stylesheet" href="CSS/font-awesome.min.css">
@@ -50,11 +50,11 @@
 		}
 	?>
 	<section>
-	<form id='register' action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post' accept-charset='UTF-8'>
+	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post' accept-charset='UTF-8'>
 		<fieldset >
 			<legend><span class="fa fa-pencil fa-2x"></span>Edit Start-up</legend>
 			<input type='hidden' name='submitted' id='submitted' value='1'/>
-			<input type='hidden' name='title' id='title' value='<?php echo $_POST['title']; ?>'/>
+			<input type='hidden' name='title' id='title' value="<?php echo $_POST['title']; ?>"/>
 			<input type='text' name='newtitle' id='newtitle' maxlength="20" placeholder="New Title"/>
 			<textarea name='description' id='description'>New Description of the Start Up</textarea>
 			<select id='industry' name='industry'>
@@ -64,6 +64,14 @@
 				<option value="finance">Finance</option>
 				<option value="travel">Travel</option>
 			</select>
+			<input type='submit' name='submit' value='Submit' />	 
+		</fieldset>
+	</form>
+	<form action="deletestartup.php" method='post' accept-charset='UTF-8'>
+		<fieldset >
+			<legend><span class="fa fa-trash-o fa-2x"></span>Delete Start-up</legend>
+			<input type='hidden' name='submitted' id='submitted' value='1'/>
+			<input type='hidden' name='title' id='title' value="<?php echo $_POST['title']; ?>"/>
 			<input type='submit' name='submit' value='Submit' />	 
 		</fieldset>
 	</form>
