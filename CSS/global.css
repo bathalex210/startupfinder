@@ -118,8 +118,10 @@ header ul {
 	max-height: 60px;
 }
 header ul:hover {max-height: 500px;}
-
-header ul li a {
+header ul li {
+	cursor: pointer;
+}
+header ul li a, header ul li:first-child {
 	-moz-transition: background .3s ease;
     -webkit-transition: background .3s ease;
     -o-transition: background .3s ease;
@@ -129,8 +131,8 @@ header ul li a {
 	height: 60px;
 	width: 175px;
 }
-header ul li a:hover {background: #337B34;}
-header ul li span {padding: 0 10px; text-align: left;}
+header ul li a:hover, header ul li:first-child:hover {background: #337B34;}
+header ul li span, header ul li:first-child span {padding: 0 10px; text-align: left;}
 
 /**
  * Main Content
