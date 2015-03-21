@@ -1,5 +1,5 @@
 <?php
-	if (strcmp($_GET['best'],"true")==0) {
+	if (!empty($_GET['best'])) {
 		if (!empty($_GET['datestart']) && !empty($_GET['dateend']) && !empty($_GET['k'])) {
 			bestIdeas($_GET['k'],$_GET['datestart'], $_GET['dateend']);
 		}
