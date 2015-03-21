@@ -37,8 +37,10 @@
 	?>
 	<section>
 	<h2>Top 5 Start-Ups (JSON format)</h2>
+	<p>URL: <a href="http://startupfinder.herokuapp.com/restapi.php?best=true&datestart=2015-03-01&dateend=2015-03-21&k=5">http://startupfinder.herokuapp.com/restapi.php?best=true&datestart=2015-03-01&dateend=2015-03-21&k=5</a></p>
 	<div id="topfive"></div>
 	<h2>Start-Up Distribution</h2>
+	<p>URL: <a href="http://startupfinder.herokuapp.com/restapi.php?graph=true">http://startupfinder.herokuapp.com/restapi.php?graph=true</a></p>
 	<div id="distribution"></div>
 	</section>
 	<footer><?php include 'functions/footer.php'; showFooter();?></footer>
