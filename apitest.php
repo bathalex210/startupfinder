@@ -12,7 +12,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$.get( "restapi.php", {}best: "true", datestart: "2015-03-01",dateend: "2015-03-21",k:5}).done(function(data) {
+		$.get( "restapi.php", {best: "true", datestart: "2015-03-01",dateend: "2015-03-21",k:5}).done(function(data) {
 			$("#topfive").html(data);
 		});
 		$.get( "restapi.php", {graph: "true"}).done(function(data) {
