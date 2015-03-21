@@ -48,7 +48,7 @@
 			<script src=\"http://code.highcharts.com/highcharts.js\"></script>
 			<script src=\"http://code.highcharts.com/modules/exporting.js\"></script>
 			<div id=\"container\" style=\"min-width: 310px; height: 400px; margin: 0 auto\"></div>";
-		echo "
+		echo "<script>
 		$(function () {
 			$('#container').highcharts({
 				chart: {
@@ -111,6 +111,6 @@
 					data: [0, 0, 0, 0, $travel]
 				}]
 			});
-		});";
+		});</script>";
 	}
 ?>
