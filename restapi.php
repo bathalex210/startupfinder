@@ -3,9 +3,9 @@
 		if (!empty($_GET['datestart']) && !empty($_GET['dateend']) && !empty($_GET['k'])) {
 			bestIdeas($_GET['k'],$_GET['datestart'], $_GET['dateend']);
 		}
-	}/* elseif (strcmp($_GET['graph'],"true")==0) {
+	} elseif (strcmp($_GET['graph'],"true")==0) {
 		showGraph();
-	}*/
+	}
 	function bestIdeas($k, $dateStart, $dateEnd) {
 		$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
 			or die('Could not connect: ' . pg_last_error());
@@ -27,8 +27,9 @@
 		$str .= "}";
 		echo $str;
 	}
-	/*
+	
 	function showGraph() {
+		/*
 		dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
 			or die('Could not connect: ' . pg_last_error());
 		$query = "SELECT * FROM (SELECT count(industry) AS health FROM startup WHERE industry='health') As health,
@@ -45,6 +46,7 @@
 		$finance = $data->finance;
 		
 		echo "
+			<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
 			<script src=\"http://code.highcharts.com/highcharts.js\"></script>
 			<script src=\"http://code.highcharts.com/modules/exporting.js\"></script>
 			<div id=\"container\" style=\"min-width: 310px; height: 400px; margin: 0 auto\"></div>";
@@ -112,5 +114,5 @@
 				}]
 			});
 		});";
-	}*/
+	*/}
 ?>
