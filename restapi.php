@@ -27,6 +27,7 @@
 		$str .= "}";
 		echo $str;
 	}
+	/*
 	function showGraph() {
 		dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
 			or die('Could not connect: ' . pg_last_error());
@@ -111,5 +112,5 @@
 				}]
 			});
 		});";
-	}
+	}*/
 ?>
