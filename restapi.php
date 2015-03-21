@@ -21,7 +21,7 @@
 					\"date\":\"$data->date\"";
 			$str .= "},";
 		}
-		rtrim($str, ",");
+		$str = rtrim($str, ",");
 		$str .= "}";
 		echo $str;
 	}
