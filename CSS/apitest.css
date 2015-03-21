@@ -1,0 +1,9 @@
+section {
+	padding: 10px;
+}
+section h2:first-child {
+	margin-top: 0;
+}
+section h2 {
+	margin: 10px 0;
+}
