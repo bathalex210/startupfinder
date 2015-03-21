@@ -29,8 +29,7 @@
 	}
 	
 	function showGraph() {
-		
-		dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
+		$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
 			or die('Could not connect: ' . pg_last_error());
 		$query = "SELECT * FROM (SELECT count(industry) AS health FROM startup WHERE industry='health') As health,
 					(SELECT count(industry) AS education FROM startup WHERE industry='education') AS edu,
@@ -44,7 +43,6 @@
 		$travel = $data->travel;
 		$technology = $data->technology;
 		$finance = $data->finance;
-		/*
 		echo "
 			<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
 			<script src=\"http://code.highcharts.com/highcharts.js\"></script>
@@ -114,5 +112,5 @@
 				}]
 			});
 		});";
-	*/}
+	}
 ?>
