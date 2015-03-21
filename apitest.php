@@ -10,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="CSS/global.css"> <!-- Global CSS Styling -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
 	$(function() {
 		$.get( "restapi.php", {best: "true", datestart: "2015-03-01",dateend: "2015-03-21",k:5}).done(function(data) {
