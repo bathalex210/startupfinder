@@ -55,10 +55,10 @@
 					type: 'column'
 				},
 				title: {
-					text: 'Monthly Average Rainfall'
+					text: 'Start Up Distribution'
 				},
 				subtitle: {
-					text: 'Source: WorldClimate.com'
+					text: 'Source: startupfinder.herokuapp.com'
 				},
 				xAxis: {
 					categories: [
