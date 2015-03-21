@@ -11,13 +11,13 @@
 		$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 		echo "{";
 		while ($data = pg_fetch_object($result)) {
-			echo "'startup':{"
+			echo "'startup':{";
 			echo "'title':'$data->title',
 					'description':'$data->description',
 					'industry':'$data->industry',
 					'email':'$data->email',
 					'date':'$data->date'";
-			echo "},"
+			echo "},";
 		}
 		echo "}";
 	}
