@@ -10,8 +10,10 @@
 		$query = "SELECT * FROM (SELECT startup.title,description,industry,startup.email,startup.date,count(rating) FROM startup,likes WHERE startup.title=likes.title AND rating='like' GROUP BY startup.title,description,industry,startup.email,startup.date ORDER BY count(rating) DESC LIMIT $k) AS bestideas WHERE date<='$dateEnd' AND date>='$dateStart'";
 		$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 		echo "{";
+		$i=0;
 		while ($data = pg_fetch_object($result)) {
-			echo "\"startup\":{";
+			$i++;
+			echo "\"startup$i\":{";
 			echo "\"title\":\"$data->title\",
 					\"description\":\"$data->description\",
 					\"industry\":\"$data->industry\",
