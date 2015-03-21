@@ -9,21 +9,20 @@
 			or die('Could not connect: ' . pg_last_error());
 		$query = "SELECT * FROM (SELECT startup.title,description,industry,startup.email,startup.date,count(rating) FROM startup,likes WHERE startup.title=likes.title AND rating='like' GROUP BY startup.title,description,industry,startup.email,startup.date ORDER BY count(rating) DESC LIMIT $k) AS bestideas WHERE date<='$dateEnd' AND date>='$dateStart'";
 		$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-		echo "{";
+		$str = "{";
 		$i=0;
-		$str = "";
 		while ($data = pg_fetch_object($result)) {
 			$i++;
-			str += "\"startup$i\":{";
-			str += "\"title\":\"$data->title\",
+			$str += "\"startup$i\":{";
+			$str += "\"title\":\"$data->title\",
 					\"description\":\"$data->description\",
 					\"industry\":\"$data->industry\",
 					\"email\":\"$data->email\",
 					\"date\":\"$data->date\"";
-			str+= "},";
+			$str+= "},";
 		}
 		rtrim($str, ",");
-		str += "}";
+		$str += "}";
 		echo $str;
 	}
 ?>
