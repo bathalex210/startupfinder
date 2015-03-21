@@ -13,16 +13,16 @@
 		$i=0;
 		while ($data = pg_fetch_object($result)) {
 			$i++;
-			$str += "\"startup$i\":{";
-			$str += "\"title\":\"$data->title\",
+			$str .= "\"startup$i\":{";
+			$str .= "\"title\":\"$data->title\",
 					\"description\":\"$data->description\",
 					\"industry\":\"$data->industry\",
 					\"email\":\"$data->email\",
 					\"date\":\"$data->date\"";
-			$str+= "},";
+			$str .= "},";
 		}
 		rtrim($str, ",");
-		$str += "}";
+		$str .= "}";
 		echo $str;
 	}
 ?>
