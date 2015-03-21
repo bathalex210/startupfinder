@@ -8,11 +8,13 @@ CREATE TABLE startup(
 	title text NOT NULL,
 	description text NOT NULL,
 	industry text NOT NULL,
-	email text NOT NULL,
-	date TIMESTAMP NOT NULL DEFAULT NOW()
+	email text NOT NULL REFERENCES users,
+	date TIMESTAMP NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(title,description)
 );
 CREATE TABLE likes(
-	email text NOT NULL,
+	ID SERIAL PRIMARY KEY,
+	email text NOT NULL REFERENCES users,
 	title text NOT NULL,
 	rating text NOT NULL
 );
