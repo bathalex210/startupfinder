@@ -1,13 +1,9 @@
 <?php
+	echo $_GET['k'].$_GET['datestart'].$_GET['dateend'];
 	if (!empty($_GET['best'])) {
 		if (!empty($_GET['datestart']) && !empty($_GET['dateend']) && !empty($_GET['k'])) {
 			bestIdeas($_GET['k'],$_GET['datestart'], $_GET['dateend']);
-			echo 'bestIdeas called.'._GET['k'].$_GET['datestart'].$_GET['dateend'];
-		} else {
-			echo 'empty dates & k'._GET['k'].$_GET['datestart'].$_GET['dateend'];
 		}
-	} else {
-		echo 'empty best'._GET['k'].$_GET['datestart'].$_GET['dateend'];
 	}
 	function bestIdeas($k, $dateStart, $dateEnd) {
 		$dbconn = pg_connect("host=ec2-23-23-215-150.compute-1.amazonaws.com dbname=d2psqpda41ih1k user=tfqyqshbouweik password=P3mnTBRoi6sqF6oqcvU3ruO2kS")
@@ -27,4 +23,5 @@
 		}
 		echo "}";
 	}
+	SELECT * FROM (SELECT startup.title,description,industry,startup.email,startup.date,count(rating) FROM startup,likes WHERE startup.title=likes.title AND rating='like' GROUP BY startup.title,description,industry,startup.email,startup.date ORDER BY count(rating) DESC) AS bestideas WHERE date<='2015-03-22' AND date>='2015-03-20' LIMIT 5;
 ?>
