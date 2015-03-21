@@ -16,6 +16,7 @@ function defaultMenu () {
 					<li><span class="fa fa-bars"></span>Menu</li>
 					<li><a href="/register.php"><span class="fa fa-plus"></span>Create an Account</a></li>
 					<li><a href="/list.php"><span class="fa fa-search"></span>Browse Start-Ups</a></li>
+					<li><a href="/testapi.php"><span class="fa fa-question"></span>Test API</a></li>
 					<li><a href="/login.php"><span class="fa fa-sign-in"></span>Login</a></li>
 				</ul>
 			</div>
@@ -39,6 +40,7 @@ function userMenu() {
 					<li><a href="/newstartup.php"><span class="fa fa-plus"></span>New Start-Up</a></li>
 					<li><a href="/list.php"><span class="fa fa-search"></span>Browse Start-Ups</a></li>
 					<li><a href="/profile.php"><span class="fa fa-cogs"></span>My Account</a></li>
+					<li><a href="/testapi.php"><span class="fa fa-question"></span>Test API</a></li>
 					<li><a href="/login.php"><span class="fa fa-sign-out"></span>Logout</a></li>
 				</ul>
 			</div>
